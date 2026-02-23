@@ -2,12 +2,12 @@ import { motion } from "framer-motion"
 import { ChevronRight, Check, Paperclip, Globe, Lightbulb } from "lucide-react"
 
 const agents = [
-  { name: "Cursor", isAgent: true, selected: true, icon: "◇" },
-  { name: "GitHub Copilot", isAgent: true, selected: false, icon: "◉" },
-  { name: "Sentry", isAgent: true, selected: false, icon: "◈" },
-  { name: "Leela", isAgent: false, selected: false, icon: "○" },
-  { name: "Codex", isAgent: true, selected: false, icon: "◎" },
-  { name: "Conor", isAgent: false, selected: false, icon: "○" },
+  { name: "Игрок Alex", isAgent: false, selected: true, icon: "🔥" },
+  { name: "Игрок Maria", isAgent: false, selected: false, icon: "⭐" },
+  { name: "Игрок Dmitri", isAgent: false, selected: false, icon: "💎" },
+  { name: "Игрок Chen", isAgent: false, selected: false, icon: "🚀" },
+  { name: "Игрок Sara", isAgent: false, selected: false, icon: "⚡" },
+  { name: "Игрок Ivan", isAgent: false, selected: false, icon: "🎯" },
 ]
 
 export function AISection() {
@@ -30,8 +30,8 @@ export function AISection() {
             transition={{ duration: 0.6 }}
             className="flex items-center gap-2 mb-6"
           >
-            <div className="w-2 h-2 rounded-full bg-blue-500" />
-            <span className="text-zinc-400 text-sm">Искусственный интеллект</span>
+            <div className="w-2 h-2 rounded-full bg-yellow-500" />
+            <span className="text-zinc-400 text-sm">Онлайн прямо сейчас</span>
             <ChevronRight className="w-4 h-4 text-zinc-500" />
           </motion.div>
 

@@ -3,76 +3,65 @@ import { ChevronRight, Plus } from "lucide-react"
 
 const featureCards = [
   {
-    title: "Планирование спринтов",
+    title: "Сделай ставку",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 791 669"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="max-w-full max-h-full"
-        >
-          <path
-            opacity="0.25"
-            d="M377.449 24.2664L22.1248 192.099C9.24419 198.183 1.16249 211.29 1.51081 225.531L10.925 610.428C11.5763 637.054 39.9132 653.778 63.5378 641.48L409.448 461.403C421.355 455.204 428.824 442.895 428.824 429.471V56.8179C428.824 30.407 401.33 12.9865 377.449 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M497.594 24.2664L142.269 192.099C129.389 198.183 121.307 211.29 121.655 225.531L131.07 610.428C131.721 637.054 160.058 653.778 183.682 641.48L529.592 461.403C541.5 455.204 548.969 442.895 548.969 429.471V56.8179C548.969 30.407 521.475 12.9865 497.594 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M617.738 24.2664L262.414 192.099C249.533 198.183 241.451 211.29 241.8 225.531L251.214 610.428C251.865 637.054 280.202 653.778 303.827 641.48L649.737 461.403C661.644 455.204 669.113 442.895 669.113 429.471V56.8179C669.113 30.407 641.619 12.9865 617.738 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-          <path
-            opacity="0.25"
-            d="M737.883 24.2664L382.558 192.099C369.678 198.183 361.596 211.29 361.944 225.531L371.358 610.428C372.01 637.054 400.347 653.778 423.971 641.48L769.881 461.403C781.789 455.204 789.258 442.895 789.258 429.471V56.8179C789.258 30.407 761.764 12.9865 737.883 24.2664Z"
-            fill="#2C2C2C"
-            fillOpacity="0.8"
-            stroke="#424242"
-            strokeWidth="3"
-          />
-        </svg>
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden p-8">
+        <div className="flex flex-col items-center gap-4 w-full">
+          <div className="text-zinc-500 text-xs uppercase tracking-wider">Ставка</div>
+          <div className="text-5xl font-bold text-yellow-400">100 ₽</div>
+          <div className="flex gap-2 mt-2">
+            {[10, 50, 100, 500].map((v) => (
+              <div key={v} className="px-3 py-1 bg-zinc-800 border border-zinc-700 rounded text-xs text-zinc-400">{v}</div>
+            ))}
+          </div>
+          <div className="w-full h-px bg-zinc-800 mt-2" />
+          <div className="flex items-center gap-2 text-sm text-zinc-400">
+            <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            Авто-вывод при ×2.00
+          </div>
+        </div>
       </div>
     ),
   },
   {
-    title: "Управление итерациями",
+    title: "Следи за ростом",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-        <img
-          src="/images/speed-lines.png"
-          alt="Иллюстрация скорости"
-          className="w-full h-full object-cover"
-          style={{ filter: "invert(1)" }}
-        />
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden p-8">
+        <div className="flex flex-col items-center gap-3 w-full">
+          <div className="text-zinc-500 text-xs uppercase tracking-wider">Коэффициент</div>
+          <div className="text-6xl font-bold text-white tabular-nums">×3.47</div>
+          <svg viewBox="0 0 200 60" className="w-full opacity-60" fill="none">
+            <polyline points="0,55 30,50 60,42 90,30 120,20 150,10 180,5 200,3" stroke="#eab308" strokeWidth="2" fill="none" strokeLinecap="round"/>
+            <polygon points="0,60 0,55 30,50 60,42 90,30 120,20 150,10 180,5 200,3 200,60" fill="url(#grad)" opacity="0.3"/>
+            <defs>
+              <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#eab308" />
+                <stop offset="100%" stopColor="transparent" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div className="text-green-400 text-sm font-medium">+247 ₽ прибыль</div>
+        </div>
       </div>
     ),
   },
   {
-    title: "Когда важна точность",
+    title: "Успей вывести",
     illustration: (
-      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-        <img
-          src="/images/precision-workflow.png"
-          alt="Иллюстрация точного процесса"
-          className="w-full h-full object-cover"
-          style={{ filter: "invert(1)" }}
-        />
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden p-8">
+        <div className="flex flex-col items-center gap-4 w-full">
+          <div className="text-zinc-500 text-xs uppercase tracking-wider">До краша</div>
+          <div className="relative w-24 h-24">
+            <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
+              <circle cx="50" cy="50" r="40" stroke="#27272a" strokeWidth="8" fill="none"/>
+              <circle cx="50" cy="50" r="40" stroke="#eab308" strokeWidth="8" fill="none" strokeDasharray="180 251" strokeLinecap="round"/>
+            </svg>
+            <div className="absolute inset-0 flex items-center justify-center text-xl font-bold text-white">72%</div>
+          </div>
+          <button className="w-full py-2.5 bg-yellow-400 text-zinc-900 font-bold rounded-lg text-sm">
+            💰 Забрать сейчас
+          </button>
+        </div>
       </div>
     ),
   },
@@ -105,7 +94,7 @@ export function FeatureCardsSection() {
                 lineHeight: 1.1,
               }}
             >
-              Создан для современных команд
+              Три шага до выигрыша
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -115,10 +104,10 @@ export function FeatureCardsSection() {
               className="max-w-md"
             >
               <p className="text-zinc-400 leading-relaxed">
-                Orbit основан на практиках и принципах, которые отличают лучшие продуктовые команды:
-                фокус на главном, быстрое исполнение и внимание к качеству.{" "}
+                Crash — самая простая и захватывающая игра: поставь, наблюдай за ростом коэффициента и выведи деньги
+                до того, как всё обнулится.{" "}
                 <a href="#" className="text-white inline-flex items-center gap-1 hover:underline">
-                  Перейти на Orbit <ChevronRight className="w-4 h-4" />
+                  Попробовать демо <ChevronRight className="w-4 h-4" />
                 </a>
               </p>
             </motion.div>

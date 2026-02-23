@@ -1,4 +1,4 @@
-import { CirclePower } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 export function Navbar() {
   return (
@@ -6,24 +6,21 @@ export function Navbar() {
       <div className="w-full flex justify-center px-6 py-4">
         <div className="w-full max-w-4xl flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <CirclePower className="w-5 h-5 text-white" />
-            <span className="text-white font-semibold">Orbit</span>
+            <Icon name="Zap" className="w-5 h-5 text-yellow-400" />
+            <span className="text-white font-semibold">CrashDemo</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#" className="text-sm text-zinc-400 hover:text-white transition-colors">
-              Продукт
+              Как играть
             </a>
             <a href="#" className="text-sm text-zinc-400 hover:text-white transition-colors">
-              Ресурсы
+              Статистика
             </a>
             <a href="#" className="text-sm text-zinc-400 hover:text-white transition-colors">
-              Тарифы
+              Честность
             </a>
             <a href="#" className="text-sm text-zinc-400 hover:text-white transition-colors">
-              Клиенты
-            </a>
-            <a href="#" className="text-sm text-zinc-400 hover:text-white transition-colors">
-              Контакты
+              FAQ
             </a>
           </div>
           <div className="flex items-center gap-4">
@@ -32,9 +29,9 @@ export function Navbar() {
             </a>
             <a
               href="#"
-              className="text-sm text-white bg-zinc-800 hover:bg-zinc-700 px-3.5 py-1.5 rounded-md border border-zinc-700 transition-colors"
+              className="text-sm text-white bg-yellow-500 hover:bg-yellow-400 px-3.5 py-1.5 rounded-md border border-yellow-400 transition-colors font-medium text-zinc-900"
             >
-              Регистрация
+              Играть бесплатно
             </a>
           </div>
         </div>
